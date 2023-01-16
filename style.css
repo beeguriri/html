@@ -1,0 +1,102 @@
+* {                                         
+    font-family:"맑은 고딕";
+    margin: 5px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+header{
+    /*border:solid 2px black;*/
+    padding: 10px;
+    background-color: rgb(47, 214, 156);
+    text-align: center;
+    color: white;
+    height: 130px;
+}
+
+header > div{
+    /*border: solid 3px black;*/
+    float:left;
+}
+
+nav{
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(209, 238, 224);
+    font-size: 15px;
+    font-weight: bold;
+    clear:both;
+}
+
+a {
+    display:inline-block;
+    width: 80px;
+    height: 20px;
+    color:black;
+}
+
+a:link, a:visited {				
+    color: black;
+    text-decoration: none;  /*하이퍼링크 밑줄 없어짐*/
+}
+
+a:hover, a:active {				/*마우스 올리면 색상 변경*/
+    color: white;
+}
+
+section{
+    /*border: solid 1px rgb(103, 18, 183);
+    background-color: rgba(205, 195, 244, 0.612);*/
+    margin: 10px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    /*width: 45%;*/
+    height: auto;
+    border-bottom : 1px dotted grey
+
+    /*float:left;*/	 /*설정한 태그를 기준으로 모두 정렬 */
+}
+
+footer{
+    padding: 10px;
+    background-color: rgb(47, 214, 156);
+    text-align: center;
+    color: white;
+    clear:both;
+}
+
+.c1, .c2, .c3, .c4{
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 0px 0px 0px 10px;
+}
+
+.c1{
+    border-color: rgb(183, 61, 61);
+}
+
+.c2{
+    border-color: rgb(208, 83, 197);
+}
+
+.c3{
+    border-color: rgb(53, 185, 221);
+}
+
+.c4{
+    border-color: rgb(38, 185, 65);
+}
+
+article{
+    margin-left: 25px; 
+    color: green;
+}
+
+#s1 ol{
+    list-style-type: none;
+    padding-left:10px;
+}
+

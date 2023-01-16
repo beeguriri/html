@@ -1,0 +1,161 @@
+<!DOCTYPE html>                        
+<html lang="en">                       
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form 태그 실습</title> 
+
+        <style>
+
+            body {
+                padding: 20px;
+            }
+            input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number]{
+                width: 40%;
+                height: 20px;
+                border: solid 2px green;
+                padding: 10px;
+                box-sizing:border-box;
+            }
+
+            label[for] {
+                color:red;
+                display: inline-block;  /*인라인블럭 : 높이 작성할수있음 */
+                height: 10px;
+            }
+
+        </style>
+    </head>
+    
+    <body>
+       <!--입력 양식을 작성하는 태그-->
+
+       <h1>Form 태그 실습</h1>
+
+       <form name="myForm" method="get" action="result.html"> 
+                            <!--method 기본이 get방식, 보안이 필요할때 post방식 사용-->
+
+            <!--이름 입력 영역-->
+            <div>
+                <label for="user_name">[이름] : </label>   <!--label과 id는 짝지-->
+                <input type="text" name="user_name" id="user_name" placeholder="이름을 입력하세요." required autofocus>  
+                                                                        <!--required : 필수입력사항 지정-->
+                                                                        <!--autofocus : 새로고침 시 자동으로 입력 커서 이동-->
+
+            </div>
+            <br><br>
+
+            <!--비밀번호 입력 영역-->
+            <div>
+                <label for="user_pw">[비밀번호] : </label>
+                <input type="password" name="user_pw" id="user_pw" maxlength="12" placeholder="비밀번호를 입력하세요." required>  
+                <!--비밀번호는 보안이 필요하므로 입력 type은 text이나 password로 지정-->
+                <!--비밀번호 자리수 제한. 정해놓은 길이 이상으로 입력되지 않음-->
+            </div>
+            <br><br>
+
+            <!--메일주소 입력 영역-->
+            <div>
+                <label for="user_mail">[E-Mail] : </label>
+                <input type="email" name="user_mail" id="user_mail" placeholder="E-Mail을 입력하세요.">
+                <!--type이 email이면 메일주소 자동체크-->
+                <!--type이 email이면 모바일에서 메일주소 입력이 쉬움-->
+            </div>
+            <br><br>
+
+            <!--학년 선택 영역 radio 버튼-->
+            <div>
+                [학년 선택] :                   <!--id 중복 안됨-->
+                <input type="radio" name="grade" id="grade1" value="1학년">1학년
+                <input type="radio" name="grade" id="grade2" value="2학년">2학년
+                <!--value는 서버에 저장되는 값 (화면에 나타난 글자(라벨 등)와 상관 없음)-->
+
+                <input type="radio" name="grade" id="grade3" value="3학년">
+                <label for="grade3">3학년</label>
+                <!--label이 radio 버튼 뒤에 있으므로 input뒤에 함수 사용해줌-->
+                <!--label 글자 클릭해도 radio 버튼 클릭 됨 (사용자편의)-->
+
+                <input type="radio" name="grade" id="grade4" value="4학년">
+                <label for="grade4">4학년</label>
+            </div>
+            <br><br>
+
+            <!--신청 과목 영역 checkbox -->
+            <div>
+                [신청 과목] :
+                <input type="checkbox" name="ck_java" id="ck_java" value="자바" checked>
+                <label for="ck_java">JAVA</label>
+                                                                <!--checked : 화면 상 기본선택-->
+                <input type="checkbox" name="ck_html" id="ck_html" value="웹제작">
+                <label for="ck_html">HTML</label>
+
+                <input type="checkbox" name="ck_python" id="ck_python" value="파이썬">
+                <label for="ck_python">Python</label>
+
+                <input type="checkbox" name="ck_uiux" id="ck_uiux" value="UI/UX">
+                <label for="ck_uiux">UI/UX</label>
+            </div>
+            <br><br>
+
+            <!--학년 선택 영역 select -->
+            <label for="grade">[학년] : </label>
+            <select name="grade" id="grade">
+                <option value="1">1학년</option>
+                <option value="2">2학년</option>
+                <option value="3">3학년</option>
+                <option value="4" selected>4학년</option>  
+                                                   <!--selected : 화면 상 기본선택-->
+            </select>
+            <br><br><br>
+
+            <!--전화번호 입력 영역-->
+            <div>
+                <label for="user_tel">[전화번호] : </label>
+                <input type="tel" name="user_tel" id="user_tel" placeholder="- 기호를 빼고 입력하시오.">
+            </div>
+            <br><br>
+
+            <!--숫자 입력 영역-->
+            <div>
+                <label for="count">[인원수] : </label>
+                <input type="number" name="count" id="count"> 명
+                                        <!--숫자 0이하 입력안되게 하는 것은 자바스크립트에서-->
+            </div>
+            <br><br>
+
+            <!--날짜 입력 영역-->
+            <div>
+                <label for="date">[제출일] : </label>
+                <input type="date" name="date" id="date">
+                <!--date : 출력화면에 달력표시되어 원하는 날짜 선택 가능-->
+            </div>
+            <br><br>
+
+            <!--자기 소개 영역-->
+            <div>
+                <label for="user_info">[자기 소개] : </label>
+                <textarea name="user_info" id="user_info" cols="50" rows="10"></textarea>
+                <!--textarea : 여러줄 입력 가능-->
+            </div>
+            <br><br>
+
+            <!--버튼으로 네이버 연결 영역-->
+            <div>
+                <input type="button" value="네이버 연결" onclick="javascript:window.open('http://www.naver.com')">
+                <!--onclick : 버튼 클릭하면 새창으로 연결-->
+            </div>
+            <br><br>
+
+            <!--확인 취소 버튼 영역-->
+            <div>
+                <input type="submit" value="확인">   <!--result.html로 감-->
+                <input type="reset" value="취소">   
+            </div>
+
+
+       </form>
+
+
+    </body>
+
+</html>   

@@ -1,0 +1,150 @@
+<!DOCTYPE html>                        
+<html lang="en">                       
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>메인화면</title>   
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <style>
+        
+        table {              /*테이블 외곽*/
+            width:90%;
+            border:solid 1px black; 
+            border-collapse: collapse;     /*중복되는 표와 셀의 테두리를 한줄로 만듦*/ 
+        }               
+
+        td, th {             /*테이블 내부*/
+            width: 20%;
+            border: solid 1px black;
+            padding: 10px;
+            font-size:0.8em;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgba(209, 238, 224, 0.608);
+        }
+        </style>
+
+    </head>
+    <body> 
+       <header>
+        <!--사진영역-->
+        <div>
+            <img src="img/photo.PNG" width="130">
+        </div>
+
+        <!--제목 이름 영역-->
+        <div>
+            <br><h1>Beeguririri</h1><br><br>
+            <p>어서 오세요</p>
+        </div>
+        
+       </header>
+
+       <!--메뉴영역 - 네비게이션 영역-->
+       <nav>
+        <a href="index.html">[개인정보]</a>&nbsp;&nbsp;&nbsp;
+        <a href="index.html#s2">[학력사항]</a>&nbsp;&nbsp;&nbsp;
+        <a href="index.html#s3">[자격사항]</a>&nbsp;&nbsp;&nbsp;
+        <a href="index.html#s4">[자기소개]</a>&nbsp;&nbsp;&nbsp;
+        <a href="survey.html">[설문조사]</a>
+       </nav>
+
+        <!--개인정보 내용 영역-->
+        <section id="s1">
+            
+            <div>
+                <h1 class="c1">개인정보</h1>      
+                <ol>
+                    <li><span class="material-icons">face</span>이름</li>
+                    <li><span class="material-icons">perm_phone_msg</span>연락처</li>
+                    <li><span class="material-icons">date_range</span>E-mail</li>
+                    <li><span class="material-icons">account_balance</span>주소</li>
+                </ol>
+            </div>
+        </section>
+
+
+        <!--학력사항 내용 영역-->        
+        <section id="s2">
+            <div>
+                <h1 class="c2">학력사항</h1>
+                <table>
+                <thead>        <!--테이블 제목줄 : 자동 BOLD-->
+                    <tr>
+                        <th>출신학교</th>
+                        <th>전공</th>
+                        <th>기간</th>
+                        <th>구분</th>
+                    </tr>
+                </thead>
+                <tbody>        <!--테이블 내용줄-->
+                    <tr>
+                        <td>사아 대학교</td>
+                        <td>기계공학부</td>
+                        <td>2007.3. ~ 2011.2.</td>
+                        <td>졸업</td>
+                    </tr>
+
+                    <tr>
+                        <td>마바 고등학교</td>
+                        <td>-</td>
+                        <td>2004.3. ~ 2007.2.</td>
+                        <td>졸업</td>
+                    </tr>
+
+                    <tr>
+                        <td>다라 중학교</td>
+                        <td>-</td>
+                        <td>2001.3. ~ 2004.2.</td>
+                        <td>졸업</td>
+                    </tr>
+
+                    <tr>
+                        <td>가나 초등학교</td>
+                        <td>-</td>
+                        <td>1995.3. ~ 2001.2.</td>
+                        <td>졸업</td>
+                    </tr>
+                </tbody>
+                </table>
+
+            </div>
+        </section>
+
+        <!--자격사항 내용 영역-->        
+        <section id="s3">
+            <div>
+                <h1 class="c3">자격사항</h1>
+                <ul>
+                    <li>자격증 1</li>
+                    <li>자격증 2</li>
+                    <li>자격증 3</li>
+                </ul>
+            </div>
+        </section>
+
+        <!--자기소개 내용 영역-->        
+        <section id="s4">
+            <div>
+                <h1 class="c4">자기소개</h1>
+                <article>
+                <p>안녕하세요<br>
+                본인소개를 작성해 보세요
+                </p>
+                </article>
+            </div>
+        </section>
+
+
+        <!--꼬리말 영역-->  
+        <footer>
+            <p>&copy; KANGHJ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buk-gu, Busan </p>
+        </footer>
+
+    </body>
+</html>                                

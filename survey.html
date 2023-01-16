@@ -1,0 +1,172 @@
+<!DOCTYPE html>                        
+<html lang="en">                       
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>설문조사</title>   
+
+        <!--외부스타일 적용-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!--내부스타일 적용-->
+        <style>
+            .survey {
+                display: flex;
+                justify-content: center;
+            }
+
+            #survey {
+                padding: 10px;
+                margin: 10px;
+                width: 800px;
+                height: auto;
+            }
+
+            .box1{
+                font-size: 1em;
+                line-height: 3em;
+            }
+
+            .box2{
+                height:auto;
+            }
+
+            fieldset {
+                margin: 20px;
+                border: dotted 2px green;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            li {
+                margin: 20px;
+            }
+
+            li label {
+                width: 80px;
+                float:left;
+                font-size:0.8em;
+            }
+
+            input[type=text], input[type=password]{
+                border: solid 1px green;
+                width: 200px;
+            }
+
+            label img {
+                width:15%;
+                margin-left: 5px;
+                margin-right:20px;
+            }
+
+            #btn {
+                text-align: center;
+            }
+
+            input[type=submit], input[type=reset]{
+                background-color: rgb(209, 238, 224);
+                font-weight: bold;
+                width: 15%;
+                padding: 10px;
+                border: 0px;
+                border-radius: 10px;
+            }
+
+        </style>
+
+    </head>
+    <body> 
+       <header>
+        <!--사진영역-->
+        <div>
+            <img src="img/photo.PNG" width="130">
+        </div>
+
+        <!--제목 이름 영역-->
+        <div>
+            <br><h1>Beeguririri</h1><br><br>
+            <p>어서 오세요</p>
+        </div>
+        
+       </header>
+
+       <!--메뉴영역 - 네비게이션 영역-->
+       <nav>
+        <a href="index.html">[개인정보]</a>&nbsp;&nbsp;&nbsp;
+        <a href="index.html#s2">[학력사항]</a>&nbsp;&nbsp;&nbsp;
+        <a href="index.html#s3">[자격사항]</a>&nbsp;&nbsp;&nbsp;
+        <a href="index.html#s4">[자기소개]</a>&nbsp;&nbsp;&nbsp;
+        <a href="survey.html">[설문조사]</a>
+       </nav>
+
+       <!--설문 영역-->
+       <div class="survey">
+       <section id="survey">
+            <form name="myForm" method="get" action="">
+
+                <!--제목영역-->
+                <div class="box1">
+                    <h2>당신이 좋아하는 과일을 선택해 보세요.</h2>
+                </div>
+
+                <!--설문 입력 영역-->
+                <div class="box2">
+                    <!--개인정보-->
+                    <fieldset>
+                        <legend>개인정보</legend>
+                        <ul>
+                            <li>
+                                <label for="user_name">성명</label>
+                                <input type="text" name="user_name" id="user_name" placeholder="이름을 입력하세요.">
+                            </li>
+                            <li>
+                                <label for="user_pw">비밀번호</label>
+                                <input type="password" name="user_pw" id="user_pw" placeholder="비밀번호를 입력하세요.">
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <!--과일선택-->
+                    <fieldset>
+                        <legend>좋아하는 과일을 선택하세요</legend>
+                        <label>
+                            <input type="radio" name="fruit" id="fruit1" value="딸기">
+                            <img src="img/img1.png">
+                        </label>
+                        <label>
+                            <input type="radio" name="fruit" id="fruit2" value="바나나">
+                            <img src="img/img2.png">
+                        </label>
+                        <label>
+                            <input type="radio" name="fruit" id="fruit3" value="사과">
+                            <img src="img/img3.png">
+                        </label>
+                        <label>
+                            <input type="radio" name="fruit" id="fruit4" value="수박">
+                            <img src="img/img4.png">
+                        </label>
+                    </fieldset>
+                    <br>
+                    <div id="btn">
+                        <input type="submit" value="결과보기">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="reset" value="취소">
+                    </div>
+                </div>
+
+
+            </form>
+
+       </section>
+        </div>
+
+        <!--꼬리말 영역-->  
+        <footer>
+            <p>&copy; KANGHJ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buk-gu, Busan </p>
+        </footer>
+
+    </body>
+</html>                                
